@@ -2,7 +2,7 @@
 # scripts/lib/cms-config.ts and regenerate. tests/unit/cms-config.test.ts fails if this file drifts.
 backend:
   name: github
-  repo: IICE-IISER/iice-website
+  repo: black-swas/IICE-project
   branch: main
 local_backend: true
 publish_mode: editorial_workflow

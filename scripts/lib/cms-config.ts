@@ -573,7 +573,7 @@ export function buildCmsConfig(): Field {
 
   return {
     // Placeholder until the hosting and auth decision (SRD Q3): the repo and the OAuth route depend on it.
-    backend: { name: "github", repo: "IICE-IISER/iice-website", branch: "main" },
+    backend: { name: "github", repo: "black-swas/IICE-project", branch: "main" },
     local_backend: true,
     publish_mode: "editorial_workflow",
     media_folder: "content/media/uploads",

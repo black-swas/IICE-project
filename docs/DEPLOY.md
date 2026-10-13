@@ -91,7 +91,7 @@ the Documents addresses, until the PDFs are supplied).
 `/admin/` is Decap CMS, configured by `public/admin/config.yml`, which is generated from the schemas (`npm run cms:config`).
 Saving in the editor commits to the repository, and `deploy.yml` publishes the commit. Who may sign in depends on the host
 (SRD Q3): with GitHub as the backend, editors need a GitHub account with write access and the site needs an OAuth proxy; on a
-static host that offers Git Gateway or similar, use that. `backend.repo` in `scripts/lib/cms-config.ts` names the repository (`IICE-IISER/iice-website`); if it moves,
+static host that offers Git Gateway or similar, use that. `backend.repo` in `scripts/lib/cms-config.ts` names the repository (`black-swas/IICE-project`); if it moves,
 change it, run `npm run cms:config`, and commit the result. On Vercel there is no Git Gateway, so signing in with GitHub needs an OAuth proxy of its own. For editing on your own computer with no sign-in, run `npm run cms`
 beside `npm run dev` and open `/admin/`.
 
