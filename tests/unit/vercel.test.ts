@@ -21,7 +21,7 @@ describe("vercel.json", () => {
   const generated = vercelConfig(everyRedirect);
 
   it("builds the static export the way every other host does", () => {
-    expect(committed.framework).toBe("nextjs");
+    expect(committed.framework).toBeNull();
     expect(committed.buildCommand).toBe("npm run build");
     expect(committed.outputDirectory).toBe("out");
     expect(committed.trailingSlash).toBe(true);

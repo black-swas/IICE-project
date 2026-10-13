@@ -19,11 +19,11 @@ and `out` as the output folder, and set the variables in section 2. Cloudflare P
 `_redirects` and `_headers` files; GitHub Pages reads neither, so it gets the redirects as HTML stubs (see section 3) but not
 the security headers. In that case do not use `deploy.yml`; turn it off or delete it.
 
-**Vercel.** The committed `vercel.json` tells Vercel what it needs (Next.js, `npm run build`, `out/`, trailing slashes), and
+**Vercel.** The committed `vercel.json` tells Vercel what it needs (a plain static site, `npm run build`, `out/`, trailing slashes), and
 carries the security headers, the year-long cache for fingerprinted files and the permanent redirects for the old addresses.
 To connect it:
 
-1. In Vercel, **Add New › Project**, import this repository, and leave the framework as Next.js. Nothing else needs overriding.
+1. In Vercel, **Add New › Project**, import this repository, and leave the settings as they are: `vercel.json` sets the framework to "Other" (a static export has no server for Vercel's Next.js builder to look for) and the output folder to `out`.
 2. Under **Settings › Environment Variables**, add the variables in section 2. Give `NEXT_PUBLIC_SITE_URL` the address the
    site will have; until the real domain points at Vercel, that is the `*.vercel.app` address (canonical addresses, the sitemap
    and the feed are built from it). Tick **Production** and **Preview** as needed; set `NEXT_PUBLIC_SHOW_TODOS=1` for **Preview** only.

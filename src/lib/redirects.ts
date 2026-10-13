@@ -90,7 +90,8 @@ export function headersFile(): string {
 /**
  * `vercel.json` for Vercel. Vercel reads it from the repository before it builds, so unlike the other files it is committed
  * rather than written into `public/`; `npm run redirects` rewrites it and tests/unit/vercel.test.ts keeps it honest.
- * The build itself needs no override: Vercel detects Next.js and serves `out/` for a static export.
+ * The framework is `null` ("Other"), not `nextjs`: with the Next.js preset Vercel's builder looks for `routes-manifest.json`
+ * in the output directory and fails on a static export, which has none. As a plain static site it just serves `out/`.
  */
 export function vercelConfig(all: readonly Redirect[]) {
   const header = (source: string, headers: readonly (readonly [string, string])[]) => ({
@@ -99,7 +100,7 @@ export function vercelConfig(all: readonly Redirect[]) {
   });
   return {
     $schema: "https://openapi.vercel.sh/vercel.json",
-    framework: "nextjs",
+    framework: null,
     installCommand: "npm ci",
     buildCommand: "npm run build",
     outputDirectory: "out",
