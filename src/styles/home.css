@@ -1,0 +1,463 @@
+/*
+ * Home page sections (SPEC §3): hero, impact, why tiles, paths, logo strip, what's happening, testimonials, pitch band.
+ * Dark and amber areas follow the contrast rules: white text on primary-900, dark ink on amber fills (rule 10).
+ */
+@layer components {
+  .home-section[data-tone="surface"] {
+    background: var(--color-surface);
+  }
+  .home-section__more {
+    margin-top: 2rem;
+    font-weight: 600;
+  }
+
+  /* ── Hero ────────────────────────────────────────────────── */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    background: var(--color-primary-900);
+    color: var(--color-on-primary);
+  }
+  /* A molecular-grid motif drawn in CSS: dots joined by faint lines. No image, no request, no motion. */
+  .hero__grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 1px 1px, rgb(255 255 255 / 0.28) 1.5px, transparent 1.6px),
+      linear-gradient(135deg, transparent 49.6%, rgb(255 255 255 / 0.06) 50%, transparent 50.4%),
+      linear-gradient(45deg, transparent 49.6%, rgb(255 255 255 / 0.06) 50%, transparent 50.4%);
+    background-size:
+      3rem 3rem,
+      6rem 6rem,
+      6rem 6rem;
+    mask-image: linear-gradient(to bottom, #000 0%, transparent 85%);
+  }
+  .hero__inner {
+    position: relative;
+    display: grid;
+    gap: 1.75rem;
+    padding-block: 3.5rem 3rem;
+  }
+  .hero__title {
+    max-width: 18ch;
+    font-size: var(--text-display-xl);
+    line-height: var(--text-display-xl--line-height);
+    letter-spacing: var(--text-display-xl--letter-spacing);
+    color: var(--color-on-primary);
+  }
+  .hero__em {
+    font-style: normal;
+    color: var(--color-accent-400);
+  }
+  .hero__subcopy {
+    max-width: 38rem;
+    font-size: 1.2rem;
+    color: var(--color-on-primary);
+  }
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .hero__stages {
+    display: grid;
+    gap: 0;
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid rgb(255 255 255 / 0.3);
+  }
+  .hero__stages li {
+    display: grid;
+    gap: 0.15rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgb(255 255 255 / 0.3);
+  }
+  .hero__stage-number {
+    font-family: var(--font-mono);
+    font-size: var(--text-eyebrow);
+    letter-spacing: 0.12em;
+    color: var(--color-accent-400);
+  }
+  .hero__stages strong {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+  }
+  @media (min-width: 48rem) {
+    .hero__stages {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 2rem;
+      border-top: 0;
+    }
+    .hero__stages li {
+      border-top: 1px solid rgb(255 255 255 / 0.3);
+      border-bottom: 0;
+    }
+  }
+  @media (min-width: 64rem) {
+    .hero__inner {
+      padding-block: 6rem 4.5rem;
+    }
+  }
+
+  /* ── Impact ──────────────────────────────────────────────── */
+  .impact {
+    display: grid;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  @media (min-width: 40rem) {
+    .impact {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .impact__item {
+    padding-top: 1rem;
+    border-top: 3px solid var(--color-link);
+  }
+  .impact__value {
+    font-family: var(--font-display);
+    font-size: var(--text-h1);
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--color-ink);
+  }
+  .impact__label {
+    margin-top: 0.4rem;
+    font-weight: 600;
+  }
+  .impact__note {
+    font-size: var(--text-small);
+    color: var(--color-muted);
+  }
+
+  /* ── Why IICE tiles ──────────────────────────────────────── */
+  .tiles {
+    display: grid;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: minmax(0, 1fr);
+  }
+  @media (min-width: 40rem) {
+    .tiles {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (min-width: 64rem) {
+    .tiles {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+  .tile {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    background: var(--color-bg);
+    transition: box-shadow var(--duration-ui);
+  }
+  .tile:hover,
+  .tile[data-open="true"] {
+    box-shadow: var(--shadow-elevation-2);
+  }
+  .tile__button {
+    display: grid;
+    width: 100%;
+    gap: 0.35rem;
+    justify-items: start;
+    padding: 1.25rem;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+  .tile__icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    color: var(--color-link);
+  }
+  .tile__title {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .tile__short {
+    color: var(--color-muted);
+  }
+  .tile__more {
+    display: none;
+    padding: 0 1.25rem 1.25rem;
+  }
+  .tile[data-open="true"] .tile__more {
+    display: block;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .tile:hover .tile__more {
+      display: block;
+    }
+  }
+  .tile__more > * + * {
+    margin-top: 0.5rem;
+  }
+
+  /* ── Paths ───────────────────────────────────────────────── */
+  .paths {
+    display: grid;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  @media (min-width: 40rem) {
+    .paths {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (min-width: 64rem) {
+    .paths {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+  .path {
+    display: grid;
+    align-content: start;
+    gap: 0.6rem;
+    padding: 1.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    background: var(--color-bg);
+  }
+  .path__icon {
+    width: 2rem;
+    height: 2rem;
+    color: var(--color-link);
+  }
+  .path__title {
+    font-size: 1.3rem;
+  }
+  .path__links {
+    display: grid;
+    gap: 0.35rem;
+    margin: 0.5rem 0 0;
+    padding: 0;
+    list-style: none;
+    font-weight: 600;
+  }
+
+  /* ── Logo strip, testimonials: sideways scrolling rows ───── */
+  .scroll-row {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .scroll-row__viewport {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 0;
+  }
+  .scroll-row__list {
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0.25rem 0.25rem 0.75rem;
+    list-style: none;
+  }
+  .scroll-row__list > li {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+  .scroll-row__controls {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .scroll-row__button {
+    display: grid;
+    width: 2.75rem;
+    height: 2.75rem;
+    place-items: center;
+    border: 1px solid var(--color-border-strong);
+    border-radius: 50%;
+    background: var(--color-bg);
+    color: var(--color-ink);
+    cursor: pointer;
+  }
+  .scroll-row__button:hover {
+    background: var(--color-surface);
+  }
+  .scroll-row__button svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  .logo-strip {
+    padding-block: 2.5rem;
+    border-block: 1px solid var(--color-border);
+  }
+  .logo-strip__item a {
+    display: grid;
+    width: 9rem;
+    height: 5rem;
+    place-items: center;
+  }
+  .logo-strip__logo {
+    max-width: 8rem;
+    max-height: 4rem;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(1);
+    transition: filter var(--duration-ui);
+  }
+  .logo-strip__item a:hover .logo-strip__logo,
+  .logo-strip__item a:focus-visible .logo-strip__logo {
+    filter: none;
+  }
+  .testimonial {
+    width: min(88vw, 26rem);
+  }
+  @media (min-width: 64rem) {
+    .testimonial {
+      width: calc((100% - 1rem) / 2);
+    }
+  }
+  .testimonials .scroll-row__list > li {
+    display: grid;
+  }
+  .testimonial figure {
+    display: grid;
+    gap: 1rem;
+    align-content: space-between;
+    margin: 0;
+    padding: 1.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    background: var(--color-bg);
+  }
+  .testimonial blockquote {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+  .testimonial figcaption {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .testimonial__photo {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  /* ── What's happening ────────────────────────────────────── */
+  .open-call {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border: 2px solid var(--color-link);
+    border-radius: var(--radius-card);
+    background: var(--color-surface);
+  }
+  .open-call__title {
+    font-size: 1.5rem;
+  }
+  .open-call__sponsor {
+    font-weight: 600;
+  }
+  .open-call__side {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  @media (min-width: 48rem) {
+    .open-call {
+      grid-template-columns: 1fr auto;
+      align-items: center;
+    }
+    .open-call__side {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+  .happening {
+    display: grid;
+    gap: 2rem;
+  }
+  @media (min-width: 48rem) {
+    .happening {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .happening__title {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+  }
+  .happening__list {
+    display: grid;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .happening__item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: start;
+  }
+  .happening__item-title {
+    font-weight: 700;
+  }
+  .backed__title {
+    margin: 1.5rem 0 0.75rem;
+    font-size: 1.15rem;
+  }
+
+  /* ── Pitch band ──────────────────────────────────────────── */
+  .pitch-band {
+    padding-block: 3.5rem;
+    background: var(--color-accent-400);
+    color: var(--color-on-accent);
+  }
+  .pitch-band a {
+    color: var(--color-on-accent);
+    text-decoration: underline;
+  }
+  .pitch-band__inner {
+    display: grid;
+    gap: 2rem;
+    align-items: start;
+  }
+  .pitch-band__title {
+    max-width: 18ch;
+    font-size: var(--text-h1);
+    color: var(--color-on-accent);
+  }
+  .pitch-band__text > * + * {
+    margin-top: 1rem;
+  }
+  .pitch-band__form {
+    padding: 1.5rem;
+    border-radius: var(--radius-card);
+    background: var(--color-bg);
+    color: var(--color-ink);
+    box-shadow: var(--shadow-elevation-3);
+  }
+  .pitch-band__form a {
+    color: var(--color-link);
+  }
+  @media (min-width: 64rem) {
+    .pitch-band {
+      padding-block: 5rem;
+    }
+    .pitch-band__inner {
+      grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+      gap: 4rem;
+    }
+  }
+}

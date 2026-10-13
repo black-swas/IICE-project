@@ -1,0 +1,56 @@
+{
+  "_status": "TODO_CONFIRM",
+  "_note": "Hero headline is option A from SPEC §8.1; option B is 'From the lab bench to the *market*, at IISER Bhopal.' Confirm the choice with IICE.",
+  "_source": "SPEC §3 and §8.1",
+  "hero": {
+    "headline": "Where *science* becomes a *startup*.",
+    "subcopy": "IICE is the DST-supported technology business incubator at IISER Bhopal, helping researchers, students and founders turn deep-tech ideas into companies.",
+    "primaryCta": {
+      "label": "Apply for Incubation",
+      "href": "/apply/"
+    },
+    "secondaryCta": {
+      "label": "Explore Startups",
+      "href": "/startups/"
+    }
+  },
+  "sectionTitles": {
+    "impact": {
+      "eyebrow": "Impact",
+      "title": "IICE in numbers"
+    },
+    "whyIice": {
+      "eyebrow": "Why IICE",
+      "title": "What IICE offers"
+    },
+    "journey": {
+      "eyebrow": "Journey",
+      "title": "Your incubation journey"
+    },
+    "paths": {
+      "eyebrow": "Paths",
+      "title": "Choose your path"
+    },
+    "spotlight": {
+      "eyebrow": "Spotlight",
+      "title": "Startup Spotlight",
+      "subline": "Ventures and recognitions from the IICE community."
+    },
+    "happening": {
+      "eyebrow": "Updates",
+      "title": "What's happening"
+    },
+    "testimonials": {
+      "eyebrow": "Voices",
+      "title": "In their words"
+    },
+    "backedBy": {
+      "eyebrow": "Support",
+      "title": "Backed by"
+    }
+  },
+  "pitchBand": {
+    "title": "Have an idea worth building? Pitch to us.",
+    "body": "Tell us about your idea in a few lines and the IICE team will read it. The full application is on the Apply page."
+  }
+}
