@@ -11,6 +11,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { LinkChecker, LinkState } from "linkinator";
+import { SITE_URL } from "../src/lib/seo";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const OUT = path.join(ROOT, "out");
@@ -33,6 +34,16 @@ const isLocal = (link: string) => {
 const rel = (url: string | undefined) =>
   (url ?? "").replace(/^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?/, "") || "/";
 
+// The pages name themselves by absolute address (canonical, og:image, feed, sitemap), and CI builds with
+// NEXT_PUBLIC_SITE_URL=http://localhost:4175, where nothing is listening. Those addresses are rewritten to the checker's own
+// server, so they are checked against what was built rather than skipped or sent to the network.
+const SERVER_PORT = 4178;
+const ownOrigin = new URL(SITE_URL).origin;
+const ownAddresses = {
+  pattern: new RegExp(`^${ownOrigin.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?=/|$)`),
+  replacement: `http://localhost:${SERVER_PORT}`,
+};
+
 const checker = new LinkChecker();
 const result = await checker.check({
   path: OUT,
@@ -50,6 +61,8 @@ const result = await checker.check({
         linksToSkip: async (link: string) => isLocal(link),
       }
     : {
+        port: SERVER_PORT,
+        urlRewriteExpressions: [ownAddresses],
         // Skip anything on another host: this is a check of our own pages.
         linksToSkip: async (link: string) => !isLocal(link),
       }),
