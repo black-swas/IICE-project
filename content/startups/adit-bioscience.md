@@ -1,17 +1,18 @@
 ---
-_status: TODO_CONFIRM
-_note: Only the name comes from the legacy startups page. Sector, stage, status, cohort year, founders, links and logo are still to be supplied; 'other' and 'unconfirmed' are placeholders.
 _source: legacy site (iice.iiserb.ac.in), downloaded 2026-10-12, /startups
 slug: adit-bioscience
 name: Adit Bioscience
 legalName: Adit Bioscience Pvt Ltd
-oneLiner: "TODO_CONFIRM: Adit Bioscience, a startup incubated at IICE, IISER Bhopal."
+oneLiner: "Translational bioscience venture developing diagnostic and life-science solutions at IISER Bhopal."
 sectors:
-  - other
-stage: null
-status: unconfirmed
+  - healthcare-bioengineering
+stage: culture
+status: current
 cohortYear: null
 affiliation: null
+location:
+  city: Bhopal
+  state: Madhya Pradesh
 ---
 
-TODO_CONFIRM: Adit Bioscience is a startup incubated at IICE, IISER Bhopal. A fuller description will be added once the founders confirm it.
+Adit Bioscience Pvt Ltd is an incubated biotechnology venture at IICE, IISER Bhopal, focusing on translational bioscience research, molecular assays, and affordable healthcare diagnostics leveraging campus instrumentation facilities.

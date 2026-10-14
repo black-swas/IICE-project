@@ -1,41 +1,32 @@
 import type { ReactNode } from "react";
 
 interface SectionHeaderProps {
-  /** Heading id, so the section can point `aria-labelledby` at it. */
   id: string;
   eyebrow: string;
-  /** The "01 /" ordinal. Derive it from the order of the sections that actually render, never type it. */
   number?: number;
   title: string;
   subline?: string | undefined;
-  /** Right-aligned mono label, e.g. "STARTUP SPOTLIGHT (06)". Derive any count in it from the data. */
   rightLabel?: ReactNode;
 }
 
-const pad = (n: number) => String(n).padStart(2, "0");
-
-/** Numbered eyebrow, large title, muted subline and an optional mono label (SPEC §5.2). */
-export function SectionHeader({
-  id,
-  eyebrow,
-  number,
-  title,
-  subline,
-  rightLabel,
-}: SectionHeaderProps) {
+/**
+ * Institutional Section Header (GIGW 3.0 aligned):
+ * Uses a structured left accent bar and uppercase departmental category eyebrow instead of portfolio-style "01 /" numbering.
+ */
+export function SectionHeader({ id, eyebrow, title, subline, rightLabel }: SectionHeaderProps) {
   return (
-    <header className="wrapper-wide flex flex-wrap items-end justify-between gap-x-8 gap-y-4 pb-8">
-      <div className="max-w-measure">
-        <p className="font-mono text-eyebrow tracking-[0.12em] text-muted uppercase">
-          {number === undefined ? eyebrow : `${pad(number)} / ${eyebrow}`}
+    <header className="wrapper-wide mb-6 flex flex-wrap items-end justify-between gap-x-8 gap-y-3 border-b border-border pb-6">
+      <div className="max-w-measure border-l-4 border-primary-700 pl-4">
+        <p className="font-mono text-eyebrow font-semibold tracking-[0.08em] text-accent-700 uppercase">
+          {eyebrow}
         </p>
-        <h2 id={id} className="mt-3 font-display text-h2 text-ink">
+        <h2 id={id} className="mt-1 font-display text-h2 font-bold text-ink">
           {title}
         </h2>
-        {subline ? <p className="mt-3 text-muted">{subline}</p> : null}
+        {subline ? <p className="mt-1.5 text-muted">{subline}</p> : null}
       </div>
       {rightLabel ? (
-        <p className="font-mono text-eyebrow tracking-[0.12em] text-muted uppercase">
+        <p className="font-mono text-eyebrow font-semibold tracking-[0.08em] text-muted uppercase">
           {rightLabel}
         </p>
       ) : null}

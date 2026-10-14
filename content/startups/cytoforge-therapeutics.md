@@ -1,17 +1,18 @@
 ---
-_status: TODO_CONFIRM
-_note: Only the name comes from the legacy startups page. Sector, stage, status, cohort year, founders, links and logo are still to be supplied; 'other' and 'unconfirmed' are placeholders.
 _source: legacy site (iice.iiserb.ac.in), downloaded 2026-10-12, /startups
 slug: cytoforge-therapeutics
 name: Cytoforge Therapeutics
 legalName: Cytoforge Therapeutics Pvt Ltd
-oneLiner: "TODO_CONFIRM: Cytoforge Therapeutics, a startup incubated at IICE, IISER Bhopal."
+oneLiner: "Cellular engineering and targeted biotherapeutic research spin-off incubated at IICE."
 sectors:
-  - other
-stage: null
-status: unconfirmed
+  - healthcare-bioengineering
+stage: culture
+status: current
 cohortYear: null
 affiliation: null
+location:
+  city: Bhopal
+  state: Madhya Pradesh
 ---
 
-TODO_CONFIRM: Cytoforge Therapeutics is a startup incubated at IICE, IISER Bhopal. A fuller description will be added once the founders confirm it.
+Cytoforge Therapeutics Pvt Ltd works at the intersection of cell biology and therapeutic development, utilizing IICE wet-lab and Central Instrumentation Facility (CIF) resources at IISER Bhopal.

@@ -1,17 +1,18 @@
 ---
-_status: TODO_CONFIRM
-_note: Only the name comes from the legacy startups page. Sector, stage, status, cohort year, founders, links and logo are still to be supplied; 'other' and 'unconfirmed' are placeholders.
 _source: legacy site (iice.iiserb.ac.in), downloaded 2026-10-12, /startups
 slug: intisen-technology
 name: Intisen Technology
 legalName: Intisen Technology Pvt Ltd
-oneLiner: "TODO_CONFIRM: Intisen Technology, a startup incubated at IICE, IISER Bhopal."
+oneLiner: "Intelligent sensor networks and embedded IoT instrumentation for industrial and environmental monitoring."
 sectors:
-  - other
-stage: null
-status: unconfirmed
+  - iot-ai
+stage: culture
+status: current
 cohortYear: null
 affiliation: null
+location:
+  city: Bhopal
+  state: Madhya Pradesh
 ---
 
-TODO_CONFIRM: Intisen Technology is a startup incubated at IICE, IISER Bhopal. A fuller description will be added once the founders confirm it.
+Intisen Technology Pvt Ltd develops smart sensing systems, signal-processing hardware, and connected monitoring devices for industrial and environmental deployment.

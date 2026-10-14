@@ -62,6 +62,7 @@
 
   /* ── Utility bar ────────────────────────────────────────── */
   .utility-bar {
+    border-top: 3px solid #d97706;
     border-bottom: 1px solid var(--color-border);
     background: var(--color-surface);
     font-size: var(--text-small);
@@ -261,9 +262,6 @@
     height: 2.75rem;
   }
   @media (min-width: 64rem) {
-    .site-header__supporters {
-      display: block;
-    }
     .desktop-nav {
       display: block;
       margin-left: 0.5rem;
@@ -275,6 +273,31 @@
   @media (min-width: 80rem) {
     .site-header__pill {
       display: block;
+    }
+  }
+  /*
+   * The header is one row that must never scroll sideways, whatever font the visitor's system falls back to: the font stack
+   * is system fonts, and on Linux and some Android phones those are far wider than Segoe UI or San Francisco. The
+   * "Supported by" line is the first thing to give way (it needs the most room, and the same names are in the footer);
+   * on a phone the brand and the Apply button tighten. Measured with a deliberately wide font at 320 to 1440 px.
+   */
+  @media (min-width: 90rem) {
+    .site-header__supporters {
+      display: block;
+    }
+  }
+  @media (max-width: 30rem) {
+    .site-header__bar,
+    .site-header__actions {
+      gap: 0.5rem;
+    }
+    .brand__name {
+      font-size: 1.25rem;
+    }
+  }
+  @media (max-width: 24rem) {
+    .brand__host {
+      font-size: 0.6875rem;
     }
   }
 

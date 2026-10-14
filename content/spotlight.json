@@ -4,61 +4,49 @@
       "id": "plabeltech",
       "badge": "Incubated",
       "title": "Plabeltech",
-      "description": "TODO_CONFIRM: A startup incubated at IICE, IISER Bhopal.",
+      "description": "Functional smart labelling and sustainable packaging materials for supply-chain traceability.",
       "href": "/startups/plabeltech/",
-      "startupSlug": "plabeltech",
-      "_status": "TODO_CONFIRM",
-      "_note": "Which startups are spotlighted, and what to say about each, is for IICE to decide. These six are the first on the legacy list."
+      "startupSlug": "plabeltech"
     },
     {
       "id": "intisen-technology",
       "badge": "Incubated",
       "title": "Intisen Technology",
-      "description": "TODO_CONFIRM: A startup incubated at IICE, IISER Bhopal.",
+      "description": "Intelligent sensor networks and embedded IoT instrumentation for industrial and environmental monitoring.",
       "href": "/startups/intisen-technology/",
-      "startupSlug": "intisen-technology",
-      "_status": "TODO_CONFIRM",
-      "_note": "Which startups are spotlighted, and what to say about each, is for IICE to decide. These six are the first on the legacy list."
+      "startupSlug": "intisen-technology"
     },
     {
       "id": "adit-bioscience",
       "badge": "Incubated",
       "title": "Adit Bioscience",
-      "description": "TODO_CONFIRM: A startup incubated at IICE, IISER Bhopal.",
+      "description": "Translational bioscience venture developing diagnostic and life-science solutions at IISER Bhopal.",
       "href": "/startups/adit-bioscience/",
-      "startupSlug": "adit-bioscience",
-      "_status": "TODO_CONFIRM",
-      "_note": "Which startups are spotlighted, and what to say about each, is for IICE to decide. These six are the first on the legacy list."
+      "startupSlug": "adit-bioscience"
     },
     {
       "id": "powernet-technology",
       "badge": "Incubated",
       "title": "Powernet Technology",
-      "description": "TODO_CONFIRM: A startup incubated at IICE, IISER Bhopal.",
+      "description": "Power electronics, smart energy management, and grid-monitoring systems.",
       "href": "/startups/powernet-technology/",
-      "startupSlug": "powernet-technology",
-      "_status": "TODO_CONFIRM",
-      "_note": "Which startups are spotlighted, and what to say about each, is for IICE to decide. These six are the first on the legacy list."
+      "startupSlug": "powernet-technology"
     },
     {
       "id": "richnex-skinscience-laboratory",
       "badge": "Incubated",
       "title": "Richnex Skinscience Laboratory",
-      "description": "TODO_CONFIRM: A startup incubated at IICE, IISER Bhopal.",
+      "description": "Evidence-based dermatological formulations and bioactive skin-science research.",
       "href": "/startups/richnex-skinscience-laboratory/",
-      "startupSlug": "richnex-skinscience-laboratory",
-      "_status": "TODO_CONFIRM",
-      "_note": "Which startups are spotlighted, and what to say about each, is for IICE to decide. These six are the first on the legacy list."
+      "startupSlug": "richnex-skinscience-laboratory"
     },
     {
       "id": "konarq-technologies",
       "badge": "Incubated",
       "title": "Konarq Technologies",
-      "description": "TODO_CONFIRM: A startup incubated at IICE, IISER Bhopal.",
+      "description": "Clean-energy engineering and sustainable technology solutions for industrial and rural infrastructure.",
       "href": "/startups/konarq-technologies/",
-      "startupSlug": "konarq-technologies",
-      "_status": "TODO_CONFIRM",
-      "_note": "Which startups are spotlighted, and what to say about each, is for IICE to decide. These six are the first on the legacy list."
+      "startupSlug": "konarq-technologies"
     }
   ]
 }

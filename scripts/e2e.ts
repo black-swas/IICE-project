@@ -22,10 +22,22 @@ const PREVIEW_ENV = {
   NEXT_PUBLIC_FORM_ENDPOINT: "https://forms.iice-test.invalid/exec",
 };
 
+/**
+ * The tests expect the site's default address and no analytics, so the builds must not inherit the settings of whatever
+ * shell they run from: CI sets NEXT_PUBLIC_SITE_URL=http://localhost:4175 for Lighthouse, and a developer may have a
+ * .env of their own in the environment. Only what this file names reaches the build.
+ */
+const HERMETIC = Object.fromEntries(
+  Object.entries(process.env).filter(
+    ([key]) =>
+      !key.startsWith("NEXT_PUBLIC_") && key !== "NEXT_DIST_DIR" && key !== "IICE_CONTENT_DIR",
+  ),
+) as NodeJS.ProcessEnv;
+
 function run(command: string, commandArgs: string[], env: Record<string, string> = {}) {
   const result = spawnSync(command, commandArgs, {
     stdio: "inherit",
-    env: { ...process.env, ...env },
+    env: { ...HERMETIC, ...env },
     shell: windows, // .cmd shims need a shell on Windows
   });
   if (result.status !== 0) process.exit(result.status ?? 1);

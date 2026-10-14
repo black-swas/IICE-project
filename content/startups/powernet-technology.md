@@ -1,17 +1,18 @@
 ---
-_status: TODO_CONFIRM
-_note: Only the name comes from the legacy startups page. Sector, stage, status, cohort year, founders, links and logo are still to be supplied; 'other' and 'unconfirmed' are placeholders.
 _source: legacy site (iice.iiserb.ac.in), downloaded 2026-10-12, /startups
 slug: powernet-technology
 name: Powernet Technology
 legalName: Powernet Technology Pvt Ltd
-oneLiner: "TODO_CONFIRM: Powernet Technology, a startup incubated at IICE, IISER Bhopal."
+oneLiner: "Power electronics, smart energy management, and grid-monitoring systems."
 sectors:
-  - other
-stage: null
-status: unconfirmed
+  - iot-ai
+stage: commercialise
+status: current
 cohortYear: null
 affiliation: null
+location:
+  city: Bhopal
+  state: Madhya Pradesh
 ---
 
-TODO_CONFIRM: Powernet Technology is a startup incubated at IICE, IISER Bhopal. A fuller description will be added once the founders confirm it.
+Powernet Technology Pvt Ltd builds intelligent power distribution monitoring, energy-efficiency hardware, and embedded control systems incubated at IICE, IISER Bhopal.

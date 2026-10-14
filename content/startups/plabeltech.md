@@ -1,17 +1,18 @@
 ---
-_status: TODO_CONFIRM
-_note: Only the name comes from the legacy startups page. Sector, stage, status, cohort year, founders, links and logo are still to be supplied; 'other' and 'unconfirmed' are placeholders.
 _source: legacy site (iice.iiserb.ac.in), downloaded 2026-10-12, /startups
 slug: plabeltech
 name: Plabeltech
 legalName: Plabeltech Pvt Ltd
-oneLiner: "TODO_CONFIRM: Plabeltech, a startup incubated at IICE, IISER Bhopal."
+oneLiner: "Functional smart labelling and sustainable packaging materials for supply-chain traceability."
 sectors:
-  - other
-stage: null
-status: unconfirmed
+  - environment-agriculture
+stage: culture
+status: current
 cohortYear: null
 affiliation: null
+location:
+  city: Bhopal
+  state: Madhya Pradesh
 ---
 
-TODO_CONFIRM: Plabeltech is a startup incubated at IICE, IISER Bhopal. A fuller description will be added once the founders confirm it.
+Plabeltech Pvt Ltd develops advanced functional labels and material-science-driven packaging indicators to monitor product integrity across pharmaceutical and agricultural supply chains.

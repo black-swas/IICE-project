@@ -41,6 +41,7 @@ export function SiteHeader() {
             <ButtonLink
               href={nav.cta.href}
               variant="accent"
+              className="max-[30rem]:px-3 max-[24rem]:px-2 max-[24rem]:text-[0.8125rem]"
               {...(nav.cta.unbuilt ? { "data-todo": "unbuilt-link" } : {})}
             >
               {nav.cta.label}

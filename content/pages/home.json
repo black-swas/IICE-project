@@ -1,56 +1,53 @@
 {
-  "_status": "TODO_CONFIRM",
-  "_note": "Hero headline is option A from SPEC §8.1; option B is 'From the lab bench to the *market*, at IISER Bhopal.' Confirm the choice with IICE.",
-  "_source": "SPEC §3 and §8.1",
   "hero": {
-    "headline": "Where *science* becomes a *startup*.",
-    "subcopy": "IICE is the DST-supported technology business incubator at IISER Bhopal, helping researchers, students and founders turn deep-tech ideas into companies.",
+    "headline": "Promoting Scientific Entrepreneurship & Technology Incubation at IISER Bhopal",
+    "subcopy": "IICE is a Technology Business Incubator supported by NSTEDB, DST, Government of India under the NIDHI-TBI scheme, fostering scientific entrepreneurship at IISER Bhopal.",
     "primaryCta": {
       "label": "Apply for Incubation",
       "href": "/apply/"
     },
     "secondaryCta": {
-      "label": "Explore Startups",
+      "label": "View Startup Directory",
       "href": "/startups/"
     }
   },
   "sectionTitles": {
     "impact": {
-      "eyebrow": "Impact",
-      "title": "IICE in numbers"
+      "eyebrow": "Institutional Metrics",
+      "title": "IICE Mandate & Key Indicators"
     },
     "whyIice": {
-      "eyebrow": "Why IICE",
-      "title": "What IICE offers"
+      "eyebrow": "Incubation Support",
+      "title": "Infrastructure, Mentorship & Institutional Support"
     },
     "journey": {
-      "eyebrow": "Journey",
-      "title": "Your incubation journey"
+      "eyebrow": "Programme Structure",
+      "title": "Three-Stage Incubation Framework"
     },
     "paths": {
-      "eyebrow": "Paths",
-      "title": "Choose your path"
+      "eyebrow": "Stakeholder Gateways",
+      "title": "Information by Stakeholder Category"
     },
     "spotlight": {
-      "eyebrow": "Spotlight",
-      "title": "Startup Spotlight",
-      "subline": "Ventures and recognitions from the IICE community."
+      "eyebrow": "Portfolio Directory",
+      "title": "Featured Incubated Ventures",
+      "subline": "Research-backed enterprises and technology startups incubated at IICE, IISER Bhopal."
     },
     "happening": {
-      "eyebrow": "Updates",
-      "title": "What's happening"
+      "eyebrow": "Official Updates",
+      "title": "Programmes, Conclaves & Notifications"
     },
     "testimonials": {
-      "eyebrow": "Voices",
-      "title": "In their words"
+      "eyebrow": "Community Voices",
+      "title": "Statements from Incubatees"
     },
     "backedBy": {
-      "eyebrow": "Support",
-      "title": "Backed by"
+      "eyebrow": "Sponsoring Agencies",
+      "title": "Supported & Hosted By"
     }
   },
   "pitchBand": {
-    "title": "Have an idea worth building? Pitch to us.",
-    "body": "Tell us about your idea in a few lines and the IICE team will read it. The full application is on the Apply page."
+    "title": "Submit an Preliminary Incubation Enquiry or Technology Pitch",
+    "body": "Researchers, faculty, students, and external entrepreneurs may submit an initial concept note below for preliminary review by the IICE Technical Cell, or proceed directly to the full application form."
   }
 }

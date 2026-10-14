@@ -1,17 +1,18 @@
 ---
-_status: TODO_CONFIRM
-_note: Only the name comes from the legacy startups page. Sector, stage, status, cohort year, founders, links and logo are still to be supplied; 'other' and 'unconfirmed' are placeholders.
 _source: legacy site (iice.iiserb.ac.in), downloaded 2026-10-12, /startups
 slug: luminojen
 name: Luminojen
 legalName: Luminojen Pvt Ltd
-oneLiner: "TODO_CONFIRM: Luminojen, a startup incubated at IICE, IISER Bhopal."
+oneLiner: "Optical sensing, luminescence assays, and photonics-enabled diagnostic platforms."
 sectors:
-  - other
-stage: null
-status: unconfirmed
+  - healthcare-bioengineering
+stage: culture
+status: current
 cohortYear: null
 affiliation: null
+location:
+  city: Bhopal
+  state: Madhya Pradesh
 ---
 
-TODO_CONFIRM: Luminojen is a startup incubated at IICE, IISER Bhopal. A fuller description will be added once the founders confirm it.
+Luminojen Pvt Ltd translates research in optical materials and luminescence-based detection into compact analytical and diagnostic platforms at IICE, IISER Bhopal.

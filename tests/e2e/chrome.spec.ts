@@ -309,3 +309,25 @@ test.describe("mobile drawer", () => {
     ).toBeVisible();
   });
 });
+
+test.describe("a very wide system font", () => {
+  // The font stack is system fonts, and on Linux and some Android phones the fallback is far wider than the one the
+  // header was drawn with (Verdana is wider than all of them). The page must still not scroll sideways (WCAG 1.4.10).
+  // The policy is bypassed only to inject the font rule; the policy itself is tested in shell.spec.ts.
+  test.use({ bypassCSP: true });
+  test.skip(({ isMobile }) => isMobile, "sizes are set by hand, so the phone project adds nothing");
+
+  for (const width of [320, 360, 1024, 1100, 1280]) {
+    test(`keeps the header inside the page at ${width} px`, async ({ page }) => {
+      await page.setViewportSize({ width, height: 800 });
+      await page.goto("/");
+      await page.addStyleTag({
+        content: '*{font-family:Verdana,"DejaVu Sans",sans-serif !important}',
+      });
+      const overflow = await page.evaluate(
+        () => document.documentElement.scrollWidth - document.documentElement.clientWidth,
+      );
+      expect(overflow).toBe(0);
+    });
+  }
+});

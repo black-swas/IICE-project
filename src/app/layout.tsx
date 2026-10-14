@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Analytics } from "@/components/layout/Analytics";
-import { FloatingPitch } from "@/components/layout/FloatingPitch";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { UtilityBar } from "@/components/layout/UtilityBar";
@@ -48,7 +47,6 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
         <SiteHeader />
         <main id="main">{children}</main>
         <SiteFooter />
-        <FloatingPitch />
         {analytics ? <Analytics config={analytics} /> : null}
       </body>
     </html>
